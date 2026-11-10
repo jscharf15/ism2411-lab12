@@ -13,9 +13,14 @@ with open("data/sales.csv") as f:
     for row in reader:
         print(row)
 
-
-
 print("----- Exercise 3 -----")
+with open("data/sales.csv") as f:
+    reader = csv.reader(f)
+    header = next(reader)
+    print("Header:", header)
+    for row in reader:
+        print(row)
+
 print("----- Exercise 4 -----")
 print("----- Exercise 5 -----")
 print("----- Exercise 6 -----")
