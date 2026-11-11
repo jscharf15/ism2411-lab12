@@ -1,3 +1,13 @@
+# Reflection
+# 1. Compared to Excel, Python was better for tedious tasks, like formatting,
+#    computing, and organizing, because I could rerun the same script on the
+#    data without redoing the work. Excel is easier when I need to quickly look
+#    at or change the data by hand.
+# 2. A process that needs a log is tracking the price of a stock, because each
+#    time the price changes, a new line with the time and price can be added to
+#    the file. Append mode is the right tool because write mode would erase the
+#    older prices, and keeping all of them is what lets me see trends over time.
+
 print("----- Exercise 1 -----")
 import csv
 from datetime import datetime
