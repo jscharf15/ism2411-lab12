@@ -1,5 +1,6 @@
 print("----- Exercise 1 -----")
 import csv
+from datetime import datetime
 import os
 
 print("File exists:", os.path.exists("data/sales.csv"))
@@ -93,3 +94,7 @@ for product in sorted(product_totals):
     print(f"{product}: ${product_totals[product]:,.2f}")
 
 print("----- Exercise 8 -----")
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+with open("data/run_log.txt", "a") as log:
+    log.write(f"{timestamp} | Total revenue: ${total_revenue:,.2f}\n")
