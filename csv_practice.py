@@ -63,5 +63,21 @@ print(f"Rows in original: {rows_read}")
 print(f"Rows written to cleaned.csv: {rows_written}")
 
 print("----- Exercise 6 -----")
+# I'd use csv.reader for a quick script on a simple file where I only need a
+# few columns by position. I'd use csv.DictReader when the file has many columns, since row["price"] is clearer than row[1].
+
+dict_total = 0
+
+with open("data/sales.csv") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        price = float(row["price"])
+        quantity = int(row["quantity"])
+        line_total = price * quantity
+        dict_total += line_total
+        print(f"{row['product']}: {quantity} units × ${price:.2f} = ${line_total:.2f}")
+
+print(f"Total revenue (DictReader): ${dict_total:,.2f}")
+
 print("----- Exercise 7 -----")
 print("----- Exercise 8 -----")
