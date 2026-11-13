@@ -7,12 +7,11 @@
 #    time the price changes, a new line with the time and price can be added to
 #    the file. Append mode is the right tool because write mode would erase the
 #    older prices, and keeping all of them is what lets me see trends over time.
-
-print("----- Exercise 1 -----")
 import csv
 from datetime import datetime
 import os
 
+print("----- Exercise 1 -----")
 print("File exists:", os.path.exists("data/sales.csv"))
 
 with open("data/sales.csv") as f:
